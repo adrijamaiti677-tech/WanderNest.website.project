@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(85, 85, 189);
+  scroll-behavior: smooth;
+}
+
+header {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+.hero {
+  background: url('https://source.unsplash.com/1600x700/?travel,food') no-repeat center/cover;
+  height: 90vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 55px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #ff9800;
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 260px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cta {
+  background: linear-gradient(to right, orange, #ff5722);
+  color: white;
+  padding: 60px 20px;
+}
+
+.cta button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: orange;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);} 
+  to { opacity: 1; transform: translateY(0);} 
+}
+</style>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WanderNest - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: lightskyblue;">
+<header>
+<h1>WanderNest</h1>
+<nav id="navLinks">
+<a href="home.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="package.html">Packages</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="feedback.html">Feedback</a>
+
+</nav>
+<button onclick="toggleMode()">🌙</button>
+<div class="menu" onclick="toggleMenu()">☰</div>
+</header>
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<div class="hero-text">
+<h2>Explore the World with WanderNest</h2>
+<p>Your journey begins here ✈️</p>
+<button onclick="window.location.href='destination.html'">Explore Destinations</button>
+</div>
+</section>
+</section>
+<section class="section">
+  <h2>Top Picks</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://www.tripsavvy.com/thmb/jxYAarhPWwX9c5mlJ7lfF6rL4TY=/3008x2000/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-158810538-59edc6d0c4124400113bc0da.jpg" />
+      <h3>Coorg Trip</h3>
+      <p>Budget trip under ₹3000</p>
+    </div>
+    <div class="card">
+      <img src="https://deih43ym53wif.cloudfront.net/cola-beach-goa-india-shutterstock_772145203_82b97bd9df.jpeg" />
+      <h3>Goa Beaches</h3>
+      <p>Best cafes & vibes</p>
+    </div>
+    <div class="card">
+      <img src="https://www.travelandleisure.com/thmb/0CP3JWdU_EFnS4c5v8VtLekXb-Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-hawa-mahal-TODOJAIPUR1023-034e1287d12d453fab6d236e8cf7e982.jpg" />
+      <h3>Jaipur</h3>
+      <p>Royal palaces and rich culture.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff3e0;">
+  <h2>Explore</h2>
+  <p>Find destinations, food experiences, and travel services easily.</p>
+</section>
+
+<section class="section">
+  <h2>Budget Trips</h2>
+  <p>Plan affordable trips with complete guides and tips.</p>
+</section>
+
+<section class="section" style="background:#fff3e0;">
+  <h2>Travel Inspiration</h2>
+  <p>Get inspired with beautiful places & food experiences.</p>
+</section>
+
+<section class="section">
+  <h2>Who We Are</h2>
+  <p>We share the best travel and food experiences to make your journey memorable.</p>
+</section>
+
+<section class="cta">
+  <h2>Ready to Explore?</h2>
+  <button>Start Now</button>
+</section>
+
+
+<script src="script.js"></script>
+<div class="footer">
+  <p>© 2026 WanderNest | All Rights Reserved</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment</title>
+<style>
+body {
+  font-family: Poppins;
+  text-align: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+}
+.box {
+  background: white;
+  color: black;
+  padding: 20px;
+  margin: 50px auto;
+  width: 300px;
+  border-radius: 10px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  padding: 10px;
+  background: #4facfe;
+  border: none;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2 id="title">Payment</h2>
+
+<input type="text" placeholder="Name"><br>
+<input type="number" placeholder="Card Number"><br>
+<input type="text" placeholder="Expiry"><br>
+<input type="number" placeholder="CVV"><br>
+
+<button onclick="pay()">Pay Now</button>
+</div>
+
+<script>
+// Get country from URL
+const params = new URLSearchParams(window.location.search);
+const country = params.get("country");
+
+document.getElementById("title").innerText = "Payment for " + country;
+
+function pay() {
+  alert("Payment Successful for " + country + " 🎉");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {margin:0;font-family:sans-serif;transition:0.3s;}
+header {display:flex;justify-content:space-between;background:#111;color:#fff;padding:10px;align-items:center;}
+nav a {color:white;margin:10px;text-decoration:none;}
+.menu {display:none;font-size:24px;cursor:pointer;}
+.hero {position:relative;text-align:center;color:white;}
+.hero img {width:100%;height:90vh;object-fit:cover;}
+.hero-text {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);animation:fadeIn 2s;}
+button {padding:10px;border:none;background:#ff5a5f;color:white;border-radius:5px;cursor:pointer;}
+.card {box-shadow:0 4px 10px rgba(0,0,0,0.2);padding:10px;margin:10px;border-radius:10px;animation:slideUp 1s;background:white;}
+.card img {width:100%;border-radius:10px;}
+.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding:10px;}
+.dark {background:#121212;color:white;}
+.dark .card {background:#1e1e1e;color:white;}
+
+@keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+@keyframes slideUp {from{transform:translateY(50px);opacity:0;} to{transform:translateY(0);opacity:1;}}
+
+@media(max-width:768px){
+nav {display:none;flex-direction:column;}
+.menu {display:block;}
+}
+
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 8px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.card {
+  position: relative;
+}
+
+.heart.active {
+  color: red;
+  transform: scale(1.2);
+}
+
+
+
+/* BOOK BUTTON */
+.book-btn {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #007bff;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.book-btn {
+  margin-top: 8px;
+  padding: 8px 15px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #007bff;
+}
+
+
+
+
+
+.book-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #ff5a5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

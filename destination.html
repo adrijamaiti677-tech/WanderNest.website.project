@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>WanderNest - Destinations</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.search-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-box input {
+  padding: 12px;
+  width: 280px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.filters {
+  text-align: center;
+  margin: 20px;
+}
+
+.filters button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
+.book-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background: #ff5a5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>WanderNest</h1>
+<nav id="navLinks">
+<a href="home.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="package.html">Packages</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="feedback.html">Feedback</a>
+</nav>
+</header>
+
+<div class="hero">
+<h1>🌍 Explore Countries</h1>
+<p>50 Destinations</p>
+</div>
+
+<div class="search-box">
+<input type="text" id="searchBox" placeholder="Search country...">
+</div>
+
+<div class="filters">
+<button onclick="filterRegion('all')">All</button>
+<button onclick="filterRegion('asia')">Asia</button>
+<button onclick="filterRegion('europe')">Europe</button>
+<button onclick="filterRegion('africa')">Africa</button>
+<button onclick="filterRegion('america')">America</button>
+</div>
+
+<div class="grid" id="grid">
+
+<!-- SAME CARDS (UNCHANGED) -->
+<div class="card" data-name="india" data-region="asia">
+<img src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=395,height=400,dpr=2/tour_img/5ecb57cb2c80e.jpeg">
+<h3>India</h3>
+<p class="price">₹5,67,870</p>
+<a href="payment.html?country=India" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="japan" data-region="asia">
+<img src="https://tse4.mm.bing.net/th/id/OIP.WrEMAj8BiSMhCAuy1BWMiAHaEO?rs=1&pid=ImgDetMain&o=7&rm=3">
+<h3>Japan</h3>
+<p class="price">₹5,76,876</p>
+<a href="payment.html?country=Japan" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="china" data-region="asia">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.0FYriykQQcDMGKelgcA5YgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+  <h3>China</h3>
+  <p class="price">₹9,76,546</p>
+  <a href="payment.html?country=China" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="thailand" data-region="asia">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.mnm5SZHUacIBbFE2q73biwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+  <h3>Thailand</h3>
+  <p class="price">₹8,88,800</p>
+<a href="payment.html?country=Thailand" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="indonesia" data-region="asia">
+  <img src="https://i1.wp.com/www.tusktravel.com/blog/wp-content/uploads/2020/08/indonesia-tour.jpg?fit=1920%2C1200&ssl=1">
+  <h3>Indonesia</h3>
+  <p class="price">₹7,87,900</p>
+<a href="payment.html?country=Indonesia" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="malaysia" data-region="asia">
+  <img src="https://www.tripsavvy.com/thmb/r5-kO8piEZYCH3ICok-0bEy_42I=/2120x1415/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-554917063-57571de25f9b5892e804e04a.jpg">
+  <h3>Malaysia</h3>
+  <p class="price">₹18,90,899</p>
+<a href="payment.html?country=Malaysia" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="singapore" data-region="asia">
+  <img src="https://as2.ftcdn.net/v2/jpg/02/09/82/45/1000_F_209824591_K05Tob490TmBlTekkPlNrxh1Hy7IKMTU.jpg">
+  <h3>Singapore</h3>
+  <p class="price">₹9,98,760</p>
+<a href="payment.html?country=Singapore" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="south korea" data-region="asia">
+  <img src="https://www.roadaffair.com/wp-content/uploads/2021/04/autumn-gyeongbokgung-palace-seoul-south-korea-shutterstock_653918203.jpg">
+  <h3>South Korea</h3>
+  <p class="price">₹9,75,800</p>
+<a href="payment.html?country=South Korea" class="book-btn">Book Now</a>
+</div>
+
+
+<div class="card" data-name="france" data-region="europe">
+  <img src="https://rare-gallery.com/uploads/posts/939303-nature-landscape-clouds-sky-boat-sunset-trees.jpg">
+  <h3>France</h3>
+  <p class="price">₹6,67,800</p>
+<a href="payment.html?country=France" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="italy" data-region="europe">
+  <img src="https://cdn.britannica.com/63/153463-050-06B6270D/Grand-Canal-Venice.jpg">
+  <h3>Italy</h3>
+  <p class="price">₹6,56,600</p>
+<a href="payment.html?country=Italy" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="germany" data-region="europe">
+  <img src="https://www.roadaffair.com/wp-content/uploads/2017/10/cologne-night-germany-shutterstock_426521938.jpg">
+  <h3>Germany</h3>
+  <p class="price">₹5,55,600</p>
+<a href="payment.html?country=Germany" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="spain" data-region="europe">
+  <img src="https://handluggageonly.co.uk/wp-content/uploads/2019/01/Hand-Luggage-Only-3-1.jpg">
+  <h3>Spain</h3>
+  <p class="price">₹5,78,800</p>
+<a href="payment.html?country=Spain" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="switzerland" data-region="europe">
+  <img src="https://www.travelandleisure.com/thmb/JnzsGGLOaWD626-DtH-m14byvFE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-oeschinensee-PLACESSWITZERLAND1023-e079f30e7792483aa5d7865fad1369b3.jpg">
+  <h3>Switzerland</h3>
+  <p class="price">₹5,87,800</p>
+<a href="payment.html?country=Switzerland" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="greece" data-region="europe">
+  <img src="https://www.myglobalviewpoint.com/wp-content/uploads/2023/08/Most-Beautiful-Places-in-Greece-Featured-Image-1170x780.jpg">
+  <h3>Greece</h3>
+  <p class="price">₹4,00,000</p>
+<a href="payment.html?country=Greece" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="netherlands" data-region="europe">
+  <img src="https://a.cdn-hotels.com/gdcs/production15/d1094/aa216f5d-8403-4aae-b9b1-499d5ea9037c.jpg?impolicy=fcrop&w=800&h=533&q=medium">
+  <h3>Netherlands</h3>
+  <p class="price">₹5,00,000</p>
+<a href="payment.html?country=Netherlands" class="book-btn">Book Now</a>
+</div>
+
+ 
+<div class="card" data-name="usa" data-region="america">
+  <img src="https://www.gannett-cdn.com/presto/2019/12/09/USAT/795f4dfa-d536-4b79-80e9-8b2369140283-12_-_NYC.jpg?crop=2119,1192,x0,y108&width=2119&height=1192&format=pjpg&auto=webp">
+  <h3>USA</h3>
+  <p class="price">₹8,00,000</p>
+<a href="payment.html?country=Usa" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="canada" data-region="america">
+  <img src="https://tse2.mm.bing.net/th/id/OIP.HFKR2ruH1UFwB2ofRiUYUQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+  <h3>Canada</h3>
+  <p class="price">₹5,78,900</p>
+<a href="payment.html?country=Canada" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="brazil" data-region="america">
+  <img src="https://honey2moon.files.wordpress.com/2013/01/brazil-rio-de-janeiro.jpg">
+  <h3>Brazil</h3>
+  <p class="price">₹3,56,800</p>
+<a href="payment.html?country=Brazil" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="mexico" data-region="america">
+  <img src="https://www.fodors.com/wp-content/uploads/2021/05/UltimateMexicoCity__HERO_shutterstock_1058054480-1600x1067.jpg">
+  <h3>Mexico</h3>
+  <p class="price">₹6,88,900</p>
+<a href="payment.html?country=Mexico" class="book-btn">Book Now</a>
+</div>
+
+ 
+<div class="card" data-name="egypt" data-region="africa">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.MRqC4PFoXLAaZz4nzDowiQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+  <h3>Egypt</h3>
+  <p class="price">₹9,09,800</p>
+<a href="payment.html?country=Egypt" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="kenya" data-region="africa">
+  <img src="https://www.amboseliparkkenya.com/wp-content/uploads/2021/01/Mountain-Kilimanjaros.jpg">
+  <h3>Kenya</h3>
+  <p class="price">₹8,90,000</p>
+<a href="payment.html?country=Kenya" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="morocco" data-region="africa">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.uBNg0uammMNvuPQSE6J2EAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+  <h3>Morocco</h3>
+  <p class="price">₹2,70,000</p>
+<a href="payment.html?country=Morocco" class="book-btn">Book Now</a>
+</div>
+
+<div class="card" data-name="south africa" data-region="africa">
+  <img src="https://www.gokite.travel/wp-content/uploads/2025/02/1.-Table-Mountain-%E2%80%93-Cape-Towns-Iconic-Landmark.webp">
+  <h3>South Africa</h3>
+  <p class="price">₹1,80,000</p>
+<a href="payment.html?country=South Africa" class="book-btn">Book Now</a>
+</div>
+
+</div>
+
+<p id="noResult" style="text-align:center; display:none; color:white;">No countries found 😢</p>
+
+<div class="footer">
+<p>© WanderNest | All Rights Reserved</p>
+</div>
+
+<script>
+const searchBox = document.getElementById("searchBox");
+const cards = document.querySelectorAll(".card");
+const noResult = document.getElementById("noResult");
+
+let currentRegion = "all";
+
+// COMBINED FILTER FUNCTION
+function applyFilters() {
+  let searchValue = searchBox.value.toLowerCase();
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    let name = card.dataset.name.toLowerCase();
+    let region = card.dataset.region;
+
+    let matchSearch = name.includes(searchValue);
+    let matchRegion = currentRegion === "all" || region === currentRegion;
+
+    if (matchSearch && matchRegion) {
+      card.style.display = "block";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  noResult.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+// SEARCH
+searchBox.addEventListener("keyup", applyFilters);
+
+// FILTER BUTTONS
+function filterRegion(region) {
+  currentRegion = region;
+  applyFilters();
+}
+</script>
+
+</body>
+</html>
